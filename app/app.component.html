@@ -1,0 +1,16 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+
+<div *ngFor="let item of list| paginate : {
+                itemsPerPage: tableSize,
+                currentPage: page,
+                totalItems: count}" style="display: inline-block">
+  <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="">
+</div>
+<div class="d-flex justify-content-center">
+  <pagination-controls responsive="true" previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+  </pagination-controls>
+</div>
