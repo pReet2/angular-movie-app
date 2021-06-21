@@ -1,3 +1,22 @@
 p {
-  font-family: Lato;
+  font-family: poppins;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline;
+}
+
+section {
+  background-color: #c61a2e;
+}
+
+img {
+  transition: transform 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }

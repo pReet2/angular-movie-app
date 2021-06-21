@@ -12,7 +12,7 @@ const apiUrl: string =
 })
 export class AppComponent {
   name = 'movieApp';
-  list;
+  list:any;
   page = 1;
   count = 0;
   movieSize = 7;

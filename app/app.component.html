@@ -1,14 +1,25 @@
-<hello name="{{ name }}"></hello>
-
-
-
-<div *ngFor="let item of list| paginate : {
+<section class="pt-2">
+  <div class="container">
+    <nav class="navbar navbar-light bg-light text-center">
+      <div class="container text-center">
+        <span class="h3 d-block mx-auto text-uppercase">Popular Movies</span>
+      </div>
+    </nav>
+    <div class="row text-center">
+      <div *ngFor="let item of list| paginate : {
                 itemsPerPage: movieSize,
                 currentPage: page,
-                totalItems: count}" style="display: inline-block">
-  <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="">
-</div>
-<div class="d-flex justify-content-center">
-  <pagination-controls responsive="true" previousLabel="Prev" nextLabel="Next" (pageChange)="onMovieDataChange($event)">
-  </pagination-controls>
-</div>
+                totalItems: count}" class="pt-5 col-lg-3">
+        <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="" class="w-75 shadow">
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="d-flex justify-content-center pt-4">
+    <pagination-controls responsive="true" previousLabel="Prev" nextLabel="Next"
+      (pageChange)="onMovieDataChange($event)">
+    </pagination-controls>
+  </div>
+</section>
