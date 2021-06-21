@@ -15,7 +15,7 @@ export class AppComponent {
   list;
   page = 1;
   count = 0;
-  tableSize = 7;
+  movieSize = 7;
 
   constructor(private http: HttpClient) {}
 
@@ -26,7 +26,7 @@ export class AppComponent {
     });
   }
 
-  onTableDataChange(event) {
+  onMovieDataChange(event) {
     this.page = event;
     this.getMovies();
   }
