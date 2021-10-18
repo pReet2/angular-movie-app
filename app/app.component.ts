@@ -15,7 +15,7 @@ export class AppComponent {
   list: any;
   page = 1;
   count = 0;
-  movieSize = 7;
+  movieSize = 6;
 
   constructor(private http: HttpClient) {}
 
